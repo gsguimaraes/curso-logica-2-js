@@ -1,6 +1,19 @@
-function preencheCampo (tag, texto) {
+function preencheCampo(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
 
-preencheCampo("h1", "Teste função de troca");
+function verificarChute() {
+    let chute = document.querySelector("input").value;
+    console.log(numeroSecreto == chute);
+}
+
+function gerarNumeroAleatorio() {
+    let numeroAleatorio = parseInt(Math.random() * 10 + 1);
+    return numeroAleatorio;
+}
+
+let numeroSecreto = gerarNumeroAleatorio();
+
+preencheCampo("h1", "Jogo do número secreto");
+preencheCampo("p", "Escolha um número entre 1 e 100");
